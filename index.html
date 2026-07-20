@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="description" content="A magical fairytale apology and love story." />
+<title>To My Beautiful Princess</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Ambient background layers, persist across all pages -->
+<div class="sky-bg" aria-hidden="true">
+  <div class="clouds">
+    <div class="cloud c1"></div>
+    <div class="cloud c2"></div>
+    <div class="cloud c3"></div>
+    <div class="cloud c4"></div>
+  </div>
+  <div class="stars-field"></div>
+  <div class="glow-orb orb1"></div>
+  <div class="glow-orb orb2"></div>
+</div>
+
+<!-- Floating particle layer: hearts, sparkles, butterflies, injected by JS -->
+<div id="particle-layer" class="particle-layer" aria-hidden="true"></div>
+
+<!-- Cursor sparkle trail -->
+<div id="cursor-sparkle" class="cursor-sparkle" aria-hidden="true"></div>
+
+<!-- Progress dots -->
+<nav class="page-dots" id="pageDots" aria-label="Story progress">
+  <button class="dot active" data-target="page1" aria-label="Go to welcome page"></button>
+  <button class="dot" data-target="page2" aria-label="Go to apology page"></button>
+  <button class="dot" data-target="page3" aria-label="Go to memories page"></button>
+  <button class="dot" data-target="page4" aria-label="Go to final page"></button>
+</nav>
+
+<main id="stage">
+
+  <!-- ============ PAGE 1 — WELCOME ============ -->
+  <section class="page active" id="page1" data-page="1">
+    <div class="doodles doodles-1" aria-hidden="true">
+      <span class="doodle d-crown">♛</span>
+      <span class="doodle d-flower">✿</span>
+      <span class="doodle d-star">✦</span>
+      <span class="doodle d-heart">❤</span>
+      <span class="doodle d-ribbon">🎀</span>
+    </div>
+
+    <div class="content-wrap fade-in-up">
+      <div class="portrait-wrap">
+        <div class="portrait-ring ring-outer"></div>
+        <div class="portrait-ring ring-inner"></div>
+        <div class="portrait-frame">
+          <img
+            src="assets/images/princess.png"
+            alt="A princess portrait"
+            class="portrait-img"
+            id="princessImg"
+            loading="eager"
+          />
+        </div>
+        <span class="crown-topper" aria-hidden="true">👑</span>
+        <span class="orbit orbit-a">✨</span>
+        <span class="orbit orbit-b">🌸</span>
+        <span class="orbit orbit-c">💗</span>
+        <span class="orbit orbit-d">⭐</span>
+      </div>
+
+      <h1 class="title-script">To My Beautiful Princess <span class="heart-inline">❤</span></h1>
+
+      <p class="typing-line" id="typingLine">
+        <span id="typingText"></span><span class="type-cursor">|</span>
+      </p>
+
+      <button class="btn btn-primary btn-magic reveal-btn" id="beginBtn" type="button">
+        <span class="btn-glow"></span>
+        <span class="btn-label">Begin Our Story</span>
+        <span class="btn-heart">❤</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 2 — APOLOGY ============ -->
+  <section class="page" id="page2" data-page="2">
+    <div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+    <div class="doodles doodles-2" aria-hidden="true">
+      <span class="doodle d-heart">💕</span>
+      <span class="doodle d-flower">🌷</span>
+      <span class="doodle d-star">✦</span>
+    </div>
+
+    <div class="glass-card apology-card">
+      <h2 class="title-serif">I'm Truly Sorry</h2>
+
+      <div class="apology-text" id="apologyText">
+        <p class="reveal-line">I never wanted to hurt you.</p>
+        <p class="reveal-line">My words caused pain I can never fully imagine.</p>
+        <p class="reveal-line">Every moment without you feels incomplete.</p>
+        <p class="reveal-line">I regret every careless word.</p>
+        <p class="reveal-line">You deserve kindness.</p>
+        <p class="reveal-line">You deserve patience.</p>
+        <p class="reveal-line">You deserve love.</p>
+        <p class="reveal-line">I'm not asking you to forget.</p>
+        <p class="reveal-line">I'm only asking for one chance to become better.</p>
+        <p class="reveal-line reveal-strong">I'll keep choosing you every single day.</p>
+      </div>
+
+      <button class="btn btn-secondary next-btn" data-next="page3" type="button">
+        <span class="btn-label">Our Memories</span>
+        <span class="btn-arrow">→</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============ PAGE 3 — MEMORY WALL ============ -->
+  <section class="page" id="page3" data-page="3">
+    <div class="fairy-lights" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span>
+    </div>
+
+    <h2 class="title-serif wall-title">Our Little Universe</h2>
+
+    <div class="polaroid-wall">
+      <div class="polaroid-item p1" data-index="0" tabindex="0" role="button" aria-label="Open memory 1">
+        <div class="clip"></div>
+        <div class="polaroid">
+          <img src="assets/images/photo1.jpg" alt="A cherished memory together" class="polaroid-img" loading="lazy" />
+          <p class="polaroid-caption">You became my favorite place.</p>
+        </div>
+      </div>
+      <div class="polaroid-item p2" data-index="1" tabindex="0" role="button" aria-label="Open memory 2">
+        <div class="clip"></div>
+        <div class="polaroid">
+          <img src="assets/images/photo2.jpg" alt="A cherished memory together" class="polaroid-img" loading="lazy" />
+          <p class="polaroid-caption">My safest smile.</p>
+        </div>
+      </div>
+      <div class="polaroid-item p3" data-index="2" tabindex="0" role="button" aria-label="Open memory 3">
+        <div class="clip"></div>
+        <div class="polaroid">
+          <img src="assets/images/photo3.jpg" alt="A cherished memory together" class="polaroid-img" loading="lazy" />
+          <p class="polaroid-caption">The day my world became brighter.</p>
+        </div>
+      </div>
+      <div class="polaroid-item p4" data-index="3" tabindex="0" role="button" aria-label="Open memory 4">
+        <div class="clip"></div>
+        <div class="polaroid">
+          <img src="assets/images/photo4.jpg" alt="A cherished memory together" class="polaroid-img" loading="lazy" />
+          <p class="polaroid-caption">My forever comfort.</p>
+        </div>
+      </div>
+      <div class="polaroid-item p5" data-index="4" tabindex="0" role="button" aria-label="Open memory 5">
+        <div class="clip"></div>
+        <div class="polaroid">
+          <img src="assets/images/photo5.jpg" alt="A cherished memory together" class="polaroid-img" loading="lazy" />
+          <p class="polaroid-caption">Our little universe.</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-secondary next-btn wall-next" data-next="page4" type="button">
+      <span class="btn-label">One Last Thing…</span>
+      <span class="btn-arrow">→</span>
+    </button>
+  </section>
+
+  <!-- Lightbox for polaroid photos -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-card">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close photo viewer">✕</button>
+      <img src="" alt="Enlarged memory" class="lightbox-img" id="lightboxImg" />
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+      <div class="lightbox-nav">
+        <button class="btn btn-tiny" id="lightboxPrev" type="button">‹ Previous</button>
+        <button class="btn btn-tiny" id="lightboxNext" type="button">Next ›</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PAGE 4 — FINAL VIDEO STAGE ============ -->
+  <section class="page" id="page4" data-page="4">
+    <div class="theatre">
+      <div class="theatre-lights" aria-hidden="true"></div>
+      <div class="stage-frame">
+        <div class="curtain curtain-left" id="curtainLeft"></div>
+        <div class="curtain curtain-right" id="curtainRight"></div>
+        <div class="curtain-valance"></div>
+
+        <button class="btn btn-primary ready-btn" id="readyBtn" type="button">
+          <span class="btn-glow"></span>
+          <span class="btn-label">Ready?</span>
+        </button>
+
+        <div class="stage-inner">
+          <div class="video-wrap" id="videoWrap">
+            <video
+              id="finalVideo"
+              class="final-video"
+              src="assets/videos/finalvideo.mp4"
+              controls
+              playsinline
+              preload="metadata"
+              poster=""
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="finale-text" id="finaleText">
+      <p class="thank-you-line">Thank you for watching ❤</p>
+      <p class="finale-glow">No matter what happens…<br />Thank you for being the most beautiful chapter of my life.</p>
+
+      <button class="btn btn-primary memories-btn" id="memoriesBtn" type="button">
+        <span class="btn-glow"></span>
+        <span class="btn-label">Can We Make More Beautiful Memories? <span class="btn-heart">❤</span></span>
+      </button>
+    </div>
+
+    <div class="ending-message" id="endingMessage">
+      <p>I'll Always Care About You <span class="heart-inline">❤</span></p>
+    </div>
+  </section>
+
+</main>
+
+<!-- Explosion / burst overlay for the finale -->
+<div class="burst-layer" id="burstLayer" aria-hidden="true"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
